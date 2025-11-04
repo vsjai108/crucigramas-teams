@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🎲 Crucigramas Aleatorios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        button {
+            background: #FF6B6B;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+        button:hover {
+            transform: scale(1.05);
+            background: #FF5252;
+        }
+        h2 {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎲 GENERADOR DE CRUCIGRAMAS</h2>
+        <p>¡Haz clic para obtener un crucigrama al azar!</p>
+        
+        <button onclick="abrirCrucigrama()">🎯 OBTENER CRUCIGRAMA ALEATORIO</button>
+        
+        <p><small>Los crucigramas se abrirán en una nueva pestaña</small></p>
+    </div>
+
+    <script>
+        function abrirCrucigrama() {
+            // REEMPLAZA ESTOS ENLACES CON LOS TUS:
+            const crucigramas = [
+                "https://www.xwords-generator.de/en/solve/a9r7x",
+                "https://www.xwords-generator.de/en/solve/vyxw2", 
+                "https://www.xwords-generator.de/en/solve/2fk65"
+            ];
+            
+            const indiceAleatorio = Math.floor(Math.random() * crucigramas.length);
+            const enlaceSeleccionado = crucigramas[indiceAleatorio];
+            
+            // Abrir en nueva pestaña
+            window.open(enlaceSeleccionado, '_blank');
+        }
+    </script>
+</body>
+</html>
